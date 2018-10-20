@@ -55,8 +55,9 @@ public class ResultOfTables {
     }
 
     private static int getInputNumber(String message) {
+        Scanner scanner = new Scanner(System.in);
 
-        return
+        return message;
     }
 
 }
