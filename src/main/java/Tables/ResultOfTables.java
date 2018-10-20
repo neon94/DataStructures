@@ -20,12 +20,12 @@ public class ResultOfTables {
             fill(tables[i]);
         }
 
-        for(int[] table : tables){
-            System.out.println(Arrays.toString(tables));
+        for (int[] table : tables) {
+            System.out.println(Arrays.toString(table));
         }
-        int[] distinctTable = join(tables);
-        System.out.println(Arrays.toString(distinctTable));
 
+        int[] distinctTable = join(tables);
+        System.out.println("Wynik: " + Arrays.toString(distinctTable));
     }
 
     private static void fill(int[] table) {
@@ -37,7 +37,7 @@ public class ResultOfTables {
 
 
     private static int[] join(int[][] tables) {
-        Set<Integer> values = new HashSet<Integer>();
+        final Set<Integer> values = new HashSet<Integer>();
 
         for (int [] table : tables) {
             for (int value : table) {
@@ -46,18 +46,16 @@ public class ResultOfTables {
         }
         int[] result = new int[values.size()];
 
-        Iterator<Integer> iterator = values.iterator();
         int counter = 0;
-        while(iterator.hasNext()) {
-            result[counter++] = iterator.next();
+        for (Integer value : values) {
+            result[counter++] = value;
         }
         return result;
     }
 
     private static int getInputNumber(String message) {
-        Scanner scanner = new Scanner(System.in);
-
-        return message;
+        System.out.println(message);
+        return SCANNER.nextInt();
     }
 
 }
