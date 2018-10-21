@@ -8,12 +8,12 @@ import java.util.Random;
 public class CustomPriorityQueue<T> {
     private Queue<T> elements = new java.util.PriorityQueue<T>();
 
-    public CustomPriorityQueue{
-
-    }
-
     public CustomPriorityQueue(Comparator comparator) {
         elements = new PriorityQueue<T>(comparator);
+    }
+
+    public CustomPriorityQueue() {
+
     }
 
     public void push(T element) {
