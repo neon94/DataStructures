@@ -8,17 +8,12 @@ import java.util.Scanner;
 
 public class CountDifferentWords {
 
+    //PAMIETAC O TYM ZEBY PLIK NIE MIAŁ NA KOŃCU SPACJI
     private static final String FILE_PATH = "random.txt";
 
     public static void main(String[] args) throws FileNotFoundException {
         Map<String, Integer> counter = readWords();
-        repetition(counter);
-
-    }
-
-    private static Map<String, Integer> repetition(Map<String, Integer> tempScanMap) {
-        Map<String, Integer> repetition;
-
+        System.out.println(readWords());
 
     }
 
@@ -28,9 +23,12 @@ public class CountDifferentWords {
 
         while(scanner.hasNextLine()) {
             String key = scanner.next();
-            Integer value = scanner.nextInt();
-
-            tempScanMap.put(key, value);
+            if(tempScanMap.containsKey(key)) {
+                Integer oldValue = tempScanMap.get(key);
+                tempScanMap.put(key, oldValue+1);
+            } else {
+                tempScanMap.put(key , 1);
+            }
         }
 
         scanner.close();
