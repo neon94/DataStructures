@@ -50,7 +50,6 @@ public class PeselChecker {
             if(container[i] % 10 == 0) {
                 System.out.println("D");
             } else System.out.println("N");
-
         }
     }
 }

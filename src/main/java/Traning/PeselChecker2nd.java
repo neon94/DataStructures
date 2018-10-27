@@ -19,9 +19,6 @@ public class PeselChecker2nd {
         for(int i = 0; i < peselCount; i++) {
             System.out.println(i + " " + pesels[i]);
         }
-
-
-
     }
 
     private static String checkPesel(String pesel) {
@@ -32,11 +29,9 @@ public class PeselChecker2nd {
             result += digit * MULTIPLIERS[i];
         }
 
-
         if(result % 10 == 0 && result > 0 ) {
             return "D";
         }
         return "N";
     }
-
 }
