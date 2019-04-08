@@ -55,7 +55,7 @@ public class CustomPriorityQueue<T> {
         CustomPriorityQueue<String> queue2 = new CustomPriorityQueue<String>();
         queue2.push("Zaluzje to najepsze co spotkalo ludzkosc");
         queue2.push("Argentyna to deszczowy kraj");
-        queue2.push("Polaki to pijaki");
+        queue2.push("Polacy lubia piwko");
         queue2.clear();
 
     }
